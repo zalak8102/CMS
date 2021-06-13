@@ -1,0 +1,69 @@
+<!----------nav--------------->
+<nav class="nav1">
+    <div class="nav-menu flex-row">
+        <div class="nav-brand">
+            <a href="#" class="text-gray"> Courier Management System </a>
+        </div>
+        <div class="toggle-collapse">
+            <div class="toggle-icons">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        <div>
+            <ul class="nav-items">
+                <li class="nav-link">
+                    <a href="/branch_courier"> Courier </a>
+                </li>
+                <li class="nav-link">
+                    <a href="/admin_branch"> Branch Info </a>
+                </li>
+                <li class="nav-link">
+                    <a href="/transport"> Transport Staff </a>
+                </li>
+                <li class="nav-link">
+                    <a href="/admin_profile"> Profile </a>
+                </li>
+                <li class="nav-link">
+                    <a href="/index"> Logout </a>
+                </li>
+            </ul>
+        </div>
+        <div class="social text-gray">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+</nav>
+<!-------------x--------nav---------x--------->
+<!----------------main--------------------->
+<hr>
+`<form action="">
+    <input type="search" id="gsearch" name="gsearch" placeholder="Search branch by Name" onkeyup="searchFun()">
+    <span><i class="fas fa-chevron-right"></i></span>
+</form>
+
+<h3 style="margin-left: 10vh;color: chocolate;"> Different Branch Info...</h3>
+<table id="myTable">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Rating</th>
+            <th>Email</th>
+            <th>Total Employee</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let branch of branchs">
+           <td>{{branch.id}}</td>
+           <td>{{branch.name}}</td>
+           <td>{{branch.rating}}</td>
+           <td>{{branch.email}}</td>
+           <td>{{branch.totalEmployee}}</td>
+        </tr>
+    </tbody>
+    </table>
+    <br>
+<!-------x-------------main------------x--------------->

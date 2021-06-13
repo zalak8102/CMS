@@ -1,0 +1,64 @@
+<!----------nav--------------->
+<nav class="nav1">
+    <div class="nav-menu flex-row">
+        <div class="nav-brand">
+            <a href="/#" class="text-gray" style="text-decoration: none"> Courier Management System </a>
+        </div>
+        <div class="toggle-collapse">
+            <div class="toggle-icons">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        <div>
+            <ul class="nav-items">
+                <li class="nav-link">
+                    <a href="/add_courier" style="text-decoration: none"> Add New Courier </a>
+                </li>
+                <li class="nav-link">
+                    <a href="/user_courier" style="text-decoration: none"> Courier </a>
+                </li>
+                <li class="nav-link">
+                    <a href="/track" style="text-decoration: none"> Track </a>
+                </li>
+                <li class="nav-link">
+                    <a href="/user_offers" style="text-decoration: none"> Offers </a>
+                </li>
+                <li class="nav-link">
+                    <a href="/user_branch" style="text-decoration: none"> Branch Info </a>
+                </li>
+                <li class="nav-link">
+                    <a href="/user_profile" style="text-decoration: none"> Profile </a>
+                </li>
+                <li class="nav-link">
+                    <a href="/index" style="text-decoration: none"> Logout </a>
+                </li>
+            </ul>
+        </div>
+        <div class="social text-gray">
+            <a href="/#"><i class="fab fa-facebook"></i></a>
+            <a href="/#"><i class="fab fa-instagram"></i></a>
+            <a href="/#"><i class="fab fa-twitter"></i></a>
+            <a href="/#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+</nav>
+<!-------------x--------nav---------x--------->
+<!--------------------main---------------->
+    <hr>
+    <div *ngFor="let offer of offers">
+<div class="card text-center w-25 mx-auto">
+    <div class="card-header">
+        Offer no.{{ offer.id }}
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">{{ offer.name }}</h5>
+        <p class="card-text">{{ offer.description }}</p>
+        <a href="/#" class="btn btn-success" name="avail">Avail</a>
+    </div>
+    <div class="card-footer text-muted">
+        valid till {{ offer.date }}
+    </div>
+</div>
+<br>
+</div>
+<!----x------------main-----------x-------------------->

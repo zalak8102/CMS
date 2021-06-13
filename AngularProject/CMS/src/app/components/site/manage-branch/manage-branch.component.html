@@ -1,0 +1,102 @@
+<!----------nav--------------->
+<nav class="nav1">
+    <div class="nav-menu flex-row">
+        <div class="nav-brand">
+            <a href="#" class="text-gray" style="text-decoration: none"> Courier Management System </a>
+        </div>
+        <div class="toggle-collapse">
+            <div class="toggle-icons">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        <div>
+            <ul class="nav-items">
+                <li class="nav-link">
+                    <a href="/manage_staff" style="text-decoration: none"> Manage staff </a>
+                </li>
+                <li class="nav-link">
+                    <a href="/manage_branch" style="text-decoration: none"> Manage branch </a>
+                </li>
+                <li class="nav-link">
+                    <a href="/courier" style="text-decoration: none"> Courier </a>
+                </li>
+                <li class="nav-link">
+                    <a href="/offers" style="text-decoration: none"> Offers </a>
+                </li>
+                <li class="nav-link">
+                    <a href="/profile" style="text-decoration: none"> Profile </a>
+                </li>
+                <li class="nav-link">
+                    <a href="/index" style="text-decoration: none"> Logout </a>
+                </li>
+            </ul>
+        </div>
+        <div class="social text-gray">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+</nav>
+<!-------------x--------nav---------x--------->
+
+<!-----------------main-------------------->
+
+<hr>
+<form action="">
+    <input type="search" id="gsearch" name="gsearch" placeholder="Search branch by ID" onkeyup="searchFun()">
+    <span><i class="fas fa-chevron-right"></i></span>
+</form>
+<br>
+<table id="myTable">
+    <thead>
+        <tr>
+            <th>#ID</th>
+            <th>Name</th>
+            <th>Total Employee</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let branch of branchs">
+           <td>{{branch.id}}</td>
+           <td>{{branch.name}}</td>
+           <td>{{branch.totalEmployee}}</td>
+           <td>{{branch.email}}</td>
+           <td><button class="btn" name="update" value="update" data-toggle="modal" data-target="#updatemodal">Update</button><td>
+           <td><button class="btn" name="remove" value="remove">Remove</button><td>
+        </tr>
+    </tbody>
+    </table>
+<!----------------x-------------main----------------x----------->
+<!----------------- modal------------->
+
+<div class="modal" id="updatemodal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Update branch info</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <form>
+                    <label>Total employee:</label> <input type="number" name="totalmembar"/>
+                    <label>Email:</label> <input type="email" name="email"/>
+                </form>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" name="submit" >Update</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-------x------modal-----------x------------>

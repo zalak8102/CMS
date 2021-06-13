@@ -1,0 +1,32 @@
+[
+    {
+        "id":"C001",
+        "source":"Surat",
+        "destination":"nadiad",
+        "date":"24 march,2020",
+        "cost": 200,
+        "delivered": true,
+        "userid":"U001",
+        "deliveryboyid":"T001"
+    },
+    {
+        "id":"C002",
+        "source":"Surat",
+        "destination":"Ahemdabad",
+        "date":"15 jun,2020",
+        "cost":250,
+        "delivered":false,
+        "userid":"U002",
+        "deliveryboyid":"T002"
+    },
+    {
+        "id":"C003",
+        "source":"Surat",
+        "destination":"nadiad",
+        "date":"14 jan,2020",
+        "cost":200,
+        "delivered":false,
+        "userid":"U003",
+        "deliveryboyid":"T003"
+    }
+]

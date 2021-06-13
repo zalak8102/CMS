@@ -1,0 +1,11 @@
+[
+    {
+        "id":"U001",
+        "name":"Haresh Patel",
+        "password":"Haresh@123",
+        "dob":"25 jan,1997",
+        "gender":"Male",
+        "email":"haresh@gmail.com",
+        "mono": 9909999099
+    }
+]

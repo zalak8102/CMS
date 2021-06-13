@@ -1,0 +1,15 @@
+[
+    {
+        "id":1,
+        "name":"For golden members",
+        "description":"Offer for Golden members is running till 25 sep,2020,It's 50% off on courier.",
+        "date":"25 sep,2020"
+    },
+    {
+        "id":2,
+        "name":"For all members",
+        "description":"Offer for all members is running till 5 sep,2020,It's 5% off on courier.",
+        "date":"5 sep,2020"
+    }
+
+]

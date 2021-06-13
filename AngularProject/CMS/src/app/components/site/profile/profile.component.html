@@ -1,0 +1,152 @@
+<!----------nav--------------->
+<nav class="nav1">
+    <div class="nav-menu flex-row">
+        <div class="nav-brand">
+            <a href="#" class="text-gray" style="text-decoration: none"> Courier Management System </a>
+        </div>
+        <div class="toggle-collapse">
+            <div class="toggle-icons">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        <div>
+            <ul class="nav-items">
+                <li class="nav-link">
+                    <a href="/manage_staff" style="text-decoration: none"> Manage staff </a>
+                </li>
+                <li class="nav-link">
+                    <a href="/manage_branch" style="text-decoration: none"> Manage branch </a>
+                </li>
+                <li class="nav-link">
+                    <a href="/courier" style="text-decoration: none"> Courier </a>
+                </li>
+                <li class="nav-link">
+                    <a href="/offers" style="text-decoration: none"> Offers </a>
+                </li>
+                <li class="nav-link">
+                    <a href="/profile" style="text-decoration: none"> Profile </a>
+                </li>
+                <li class="nav-link">
+                    <a href="/index" style="text-decoration: none"> Logout </a>
+                </li>
+            </ul>
+        </div>
+        <div class="social text-gray">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+</nav>
+<!-------------x--------nav---------x--------->
+
+<!------------------------main-------------------------->
+<hr>
+<div>
+    <!-- Header section start -->
+    <br>
+    <!-- Header section end -->
+
+    <!-- Hero section start -->
+    <div *ngFor="let pro of profile">
+      <ng-container *ngIf="loggedid===pro.id">
+    <div class="card p-2" style="width: 18rem;margin: auto">
+        <div class="card-body">
+          <h5 class="card-title">{{pro.name}} {{pro.id}}</h5>
+
+          <span>Username:</span>{{pro.name}}<br>
+          <span>Password:</span>{{pro.password}}<br>
+          <span>Date of Birth:</span>{{pro.dob}}<br>
+          <span>E-mail:</span>{{pro.email}}<br>
+          <span>Role :</span>{{pro.designation}}<br>
+          <br>
+                <br>
+            <button class="btn" name="update" value="update" data-toggle="modal" data-target="#updatemodal">Update</button>
+        </div>
+    </div>
+      </ng-container>
+    </div>
+
+    <!-- Hero section end -->
+
+        </div>
+<!---------x--------main-----------x---------->
+<!----------------- modal------------->
+
+<div class="modal" id="updatemodal">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Update your profile.</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <form action="" method="post" class="forms">
+
+                    <label>
+                        Username:
+                    </label>
+                    <div class="intxt">
+                        <input type="text" name="username" required/>
+                    </div>
+                    <label>
+                        Password:
+                    </label>
+                    <div class="intxt">
+                        <input type="password" name="password" required/>
+                    </div>
+                    <label>
+                        Re-enter password:
+                    </label>
+                    <div class="intxt">
+                        <input type="password" name="cpassword" required/>
+                    </div>
+                    <br>
+                    <div class="ingen">
+                        <label>
+                            Gender:
+                        </label>
+                        &nbsp;
+                        Male:<input type="radio" name="gender" value="male" style="margin-left: 1vh" checked>
+                        &nbsp;
+                        Female:<input type="radio" name="gender" value="female" style="margin-left: 6vh">
+                    </div>
+                    <br>
+                    <label>
+                        Email-id:
+                    </label>
+
+                    <div class="intxt">
+                        <input type="email" name="email" required/>
+                    </div>
+                    <label>
+                        Birthdate:
+                    </label>
+                    <div class="intxt">
+                        <input type="date" name="bdate" required/>
+                    </div>
+                    <label>
+                        Mobile-no
+                    </label>
+                    <div class="intxt">
+                        <input type="tel" name="mono" required/>
+                    </div>
+                    <br>
+                    </form>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" name="submit">Update</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-------x------modal-----------x------------>

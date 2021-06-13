@@ -1,0 +1,110 @@
+<body>
+    <!----------nav--------------->
+    <nav class="nav1">
+        <div class="nav-menu flex-row">
+            <div class="nav-brand">
+                <a href="#" class="text-gray"> Courier Management System </a>
+            </div>
+            <div class="toggle-collapse">
+                <div class="toggle-icons">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <div>
+                <ul class="nav-items">
+                    <li class="nav-link">
+                        <a href="/index"> Home </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/how"> How it's work </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/login"> Login </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/contectus"> Contact Us </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="social text-gray">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </nav>
+<!-------------x--------nav---------x--------->
+
+<!-------------main------------------->
+    <main>
+        <section class="site-title">
+            <form  [formGroup]="registrationForm" (ngSubmit)="onSubmit()" class="forms">
+                <h2 style="padding-left: 14.5rem;color: cadetblue">Register</h2>
+                <h3 style="padding-left: 7.5rem;color: red;">*Required fields</h3>
+                <label>
+                    *Username:
+                </label>
+                <div class="intxt">
+                    <input formControlName="name" type="text" name="name" required/>
+                </div>
+                <label>
+                    *Password:
+                </label>
+                <div class="intxt">
+                    <input formControlName="password" type="password" name="password" required/>
+                </div>
+                <label>
+                    *Re-enter password:
+                </label>
+                <div class="intxt">
+                    <input formControlName="cpassword" pattern="{{registrationForm.controls.password.value}}" type="password" name="cpassword" required/>
+                </div>
+                <label>
+                    *Email-id:
+                </label>
+                <div class="intxt">
+                    <input formControlName="email" type="email" name="email" required/>
+                </div>
+                <label>
+                    *Birthdate:
+                </label>
+                <div class="intxt">
+                    <input formControlName="dob" type="date" name="dob" required/>
+                </div>
+                <label>
+                    *Address
+                </label>
+                <div class="intxt">
+                    <input formControlName="address" type="text" name="address" required/>
+                </div>
+              <label>
+                *branch
+              </label>
+              <div class="intxt">
+                <input formControlName="branch" type="text" name="branch" required/>
+              </div>
+              <br>
+              <div class="ingen">
+                <label>
+                  *Designation:
+                </label>
+                &nbsp;
+                <input type="radio" formControlName="designation" name="designation" value="admin" style="margin-left: 1vh" checked><label class="lb">Admin</label>
+                &nbsp;
+                <input type="radio" formControlName="designation" name="designation" value="client" style="margin-left: 6vh"><label class="lb">Client</label>
+                &nbsp;
+                <input type="radio" formControlName="designation" name="designation" value="transport" style="margin-left: 6vh"><label class="lb">Transport</label>
+
+              </div>
+                <div>
+                    <input type="submit" class="btn" value="Register" style="margin-left: 20vh">
+                    <input type="reset" class="btn" value="Reset">
+                </div>
+            </form>
+        </section>
+    </main>
+
+<!-------x----------main------x-------->
+</body>
+

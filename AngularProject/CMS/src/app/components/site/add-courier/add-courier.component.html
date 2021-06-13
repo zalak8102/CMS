@@ -1,0 +1,81 @@
+<!----------nav--------------->
+<nav class="nav1">
+    <div class="nav-menu flex-row">
+        <div class="nav-brand">
+            <a href="#" class="text-gray"> Courier Management System </a>
+        </div>
+        <div class="toggle-collapse">
+            <div class="toggle-icons">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        <div>
+            <ul class="nav-items">
+                <li class="nav-link">
+                    <a href="/add_courier"> Add New Courier </a>
+                </li>
+                <li class="nav-link">
+                    <a href="/user_courier"> Courier </a>
+                </li>
+                <li class="nav-link">
+                    <a href="/track"> Track </a>
+                </li>
+                <li class="nav-link">
+                    <a href="/user_offers"> Offers </a>
+                </li>
+                <li class="nav-link">
+                    <a href="/user_branch"> Branch Info </a>
+                </li>
+                <li class="nav-link">
+                    <a href="/user_profile"> Profile </a>
+                </li>
+                <li class="nav-link">
+                    <a href="/index"> Logout </a>
+                </li>
+            </ul>
+        </div>
+        <div class="social text-gray">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+</nav>
+<!-------------x--------nav---------x--------->
+<!--------------main--------------------------->
+<hr>
+<main>
+    <section class="site-title">
+        <form [formGroup]="courierForm" (ngSubmit)="onSubmit()" class="forms">
+            <h3 style="margin-left: 20vh;color: chocolate"> Fill up the form to book your courier...</h3>
+            <label>Origin:</label>
+            <div class="intxt">
+            <select formControlName="source" style="margin-left: 20vh;" id="source" autofocus required>
+                <option value=surat>Surat</option>
+                <option value=ahmedabad>Ahmedabad</option>
+                <option value=nadiad>Nadiad</option>
+            </select>
+            </div>
+
+            <label>Destination:</label>
+            <div class="intxt">
+            <select  formControlName="destination" style="margin-left: 20vh;" id="destination" required>
+                <option value=surat>Surat</option>
+                <option value=ahmedabad>Ahmedabad</option>
+                <option value=nadiad>Nadiad</option>
+            </select>
+            </div>
+            <label>Weight:</label><div class="intxt"><input formControlName="weight" type="number" name="weight"></div>
+            <label>Length:</label><div class="intxt"><input formControlName="length" type="number" name="length" required></div>
+            <label>Width:</label><div class="intxt"><input formControlName="width" type="number" name="width" required></div>
+            <label>Height:</label><div class="intxt"><input formControlName="height" type="number" name="height" required></div>
+
+            <label>UserID:</label><div class="intxt"><input formControlName="userid" type="text" name="userid" required></div>
+            <div><input class="btn" style="margin-left: 28vh;" type="submit" name="add" value="Book Now"/></div>
+            <br>
+        </form>
+    </section>
+</main>
+<br>
+<!-------------------x--------main-------------x---------->

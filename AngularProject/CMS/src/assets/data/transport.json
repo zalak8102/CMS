@@ -1,0 +1,24 @@
+[
+    {
+        "id":"T001",
+        "name":"Ram shah",
+        "salary": 5000,
+        "courier":5,
+        "email":"Ram@gmail.com"
+    },
+    {
+        "id":"T002",
+        "name":"Rupil sharma",
+        "salary": 5000,
+        "courier":5,
+        "email":"Rupil@gmail.com"
+    },
+    {
+        "id":"T003",
+        "name":"Shyam patel",
+        "salary": 5000,
+        "courier":5,
+        "email":"Shyam@gmail.com"
+    }
+
+]

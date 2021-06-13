@@ -1,0 +1,23 @@
+[
+    {
+        "id":"B001",
+        "name":"Surat",
+        "total":35,
+        "email":"surat@gmail.com",
+        "rating": 4.5
+    },
+    {
+        "id":"B002",
+        "name":"Nadiad",
+        "total":20,
+        "email":"nadiad@gmail.com",
+        "rating":4.0   
+    },
+    {
+        "id":"B003",
+        "name":"Ahemdabad",
+        "total":45,
+        "email":"ahemdabad@gmail.com",
+        "rating":4.3   
+    }
+]

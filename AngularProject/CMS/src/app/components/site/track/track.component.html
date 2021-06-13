@@ -1,0 +1,63 @@
+
+	<!----------nav--------------->
+	<nav class="nav1">
+		<div class="nav-menu flex-row">
+			<div class="nav-brand">
+				<a href="#" class="text-gray"> Courier Management System </a>
+			</div>
+			<div class="toggle-collapse">
+				<div class="toggle-icons">
+					<i class="fas fa-bars"></i>
+				</div>
+			</div>
+			<div>
+				<ul class="nav-items">
+					<li class="nav-link">
+						<a href="/add_courier"> Add New Courier </a>
+					</li>
+					<li class="nav-link">
+						<a href="/user_courier"> Courier </a>
+					</li>
+					<li class="nav-link">
+						<a href="/track"> Track </a>
+					</li>
+					<li class="nav-link">
+						<a href="/user_offers"> Offers </a>
+					</li>
+					<li class="nav-link">
+						<a href="/user_branch"> Branch Info </a>
+					</li>
+					<li class="nav-link">
+						<a href="/user_profile"> Profile </a>
+					</li>
+					<li class="nav-link">
+						<a href="/index"> Logout </a>
+					</li>
+				</ul>
+			</div>
+			<div class="social text-gray">
+				<a href="#"><i class="fab fa-facebook"></i></a>
+				<a href="#"><i class="fab fa-instagram"></i></a>
+				<a href="#"><i class="fab fa-twitter"></i></a>
+				<a href="#"><i class="fab fa-youtube"></i></a>
+			</div>
+		</div>
+	</nav>
+	<!-------------x--------nav---------x--------->
+	<!-------------main------------------->
+	<hr>
+	<form (ngSubmit)="onsearch()" [formGroup]="searchform" method="get">
+    <div class="form-group">
+		<input type="text" formControlName="id" class="form-control" id="gsearch" name="gsearch" placeholder="Track your courier by ID" style="display: inline">
+		<button type="submit" class="btn" style="display: inline">Track</button>
+    </div>
+	</form>
+  <div style="margin-left: 40%">
+    <div>ID : {{trackdata.id}}</div>
+    <div>Source : {{trackdata.source}}</div>
+    <div>Destination : {{trackdata.destination}}</div>
+    <div>Is Delivered??? : {{trackdata.delivered}}</div>
+    <div>DeliveryBoy ID : {{trackdata.deliveryboyid}}</div>
+  </div>
+  <br>
+	<!------x-----------------main---------------x------------->

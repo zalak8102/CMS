@@ -1,0 +1,79 @@
+<!----------nav--------------->
+<nav class="nav1">
+    <div class="nav-menu flex-row">
+        <div class="nav-brand">
+            <a href="#" class="text-gray"> Courier Management System </a>
+        </div>
+        <div class="toggle-collapse">
+            <div class="toggle-icons">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        <div>
+            <ul class="nav-items">
+                <li class="nav-link">
+                    <a href="/manage_staff"> Manage staff </a>
+                </li>
+                <li class="nav-link">
+                    <a href="/manage_branch"> Manage branch </a>
+                </li>
+                <li class="nav-link">
+                    <a href="/courier"> Courier </a>
+                </li>
+                <li class="nav-link">
+                    <a href="/offers"> Offers </a>
+                </li>
+                <li class="nav-link">
+                    <a href="/profile"> Profile </a>
+                </li>
+                <li class="nav-link">
+                    <a href="/index"> Logout </a>
+                </li>
+            </ul>
+        </div>
+        <div class="social text-gray">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+</nav>
+<!-------------x--------nav---------x--------->
+
+<!------------main---------------------------->
+    <hr>
+<form action="">
+    <input type="search" id="gsearch" name="gsearch" placeholder="Search courier by ID" onkeyup="searchFun()">
+    <span><i class="fas fa-chevron-right"></i></span>
+</form>
+    <br>
+    <h3>couriers</h3>
+    <table id="myTable">
+		<thead>
+			<tr>
+				<th>#ID</th>
+				<th>userid</th>
+				<th>source</th>
+        <th>Destination</th>
+				<th>Date</th>
+				<th>Cost</th>
+				<th>Delivered</th>
+				<th>Deliveryboy id</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let courier of couriers">
+			   <td>{{ courier.id }}</td>
+			   <td>{{ courier.userid }}</td>
+			   <td>{{ courier.source }}</td>
+			   <td>{{ courier.destination }}</td>
+			   <td>{{ courier.date }}</td>
+			   <td>{{ courier.cost }}</td>
+			   <td>{{ courier.delivered}}</td>
+			   <td>{{ courier.deliveryboyid}}</td>
+
+			</tr>
+		</tbody>
+		</table>
+		<!-----------x-------------main------x-------------------->

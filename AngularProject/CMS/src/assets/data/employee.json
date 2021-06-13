@@ -1,0 +1,23 @@
+[
+    {
+        "id":"BA001",
+        "name":"Ramesh shah",
+        "salary":20000,
+        "branch":"Surat",
+        "email":"Ramesh@gmail.com"   
+    },
+    {
+        "id":"BA002",
+        "name":"Rakesh sharma",
+        "salary":20000,
+        "branch":"Nadiad",
+        "email":"Rakesh@gmail.com"   
+    },
+    {
+        "id":"BA003",
+        "name":"Suresh patel",
+        "salary":20000,
+        "branch":"Ahemdabad",
+        "email":"Suresh@gmail.com"   
+    }
+]

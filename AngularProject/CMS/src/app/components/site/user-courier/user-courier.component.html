@@ -1,0 +1,108 @@
+
+	<!----------nav--------------->
+	<nav class="nav1">
+		<div class="nav-menu flex-row">
+			<div class="nav-brand">
+				<a href="/#" class="text-gray"> Courier Management System </a>
+			</div>
+			<div class="toggle-collapse">
+				<div class="toggle-icons">
+					<i class="fas fa-bars"></i>
+				</div>
+			</div>
+			<div>
+				<ul class="nav-items">
+					<li class="nav-link">
+						<a href="/add_courier"> Add New Courier </a>
+					</li>
+					<li class="nav-link">
+						<a href="/user_courier"> Courier </a>
+					</li>
+					<li class="nav-link">
+						<a href="/track"> Track </a>
+					</li>
+					<li class="nav-link">
+						<a href="/user_offers"> Offers </a>
+					</li>
+					<li class="nav-link">
+						<a href="/user_branch"> Branch Info </a>
+					</li>
+					<li class="nav-link">
+						<a href="/user_profile"> Profile </a>
+					</li>
+					<li class="nav-link">
+						<a href="/index"> Logout </a>
+					</li>
+				</ul>
+			</div>
+			<div class="social text-gray">
+				<a href="/#"><i class="fab fa-facebook"></i></a>
+				<a href="/#"><i class="fab fa-instagram"></i></a>
+				<a href="/#"><i class="fab fa-twitter"></i></a>
+				<a href="/#"><i class="fab fa-youtube"></i></a>
+			</div>
+		</div>
+	</nav>
+	<!-------------x--------nav---------x--------->
+	<!-------------main------------------->
+	<hr>
+	<form action="">
+		<input type="search" id="gsearch" name="gsearch" placeholder="Search courier by ID" onkeyup="searchFun2()">
+		<span><i class="fas fa-chevron-right"></i></span>
+	</form>
+
+	<h3 style="margin-left: 10vh;color: chocolate;"> Current Courier Info...</h3>
+		<table id="myTable1">
+      <thead>
+			<tr>
+				<th>ID</th>
+				<th>source</th>
+			    <th>Destination</th>
+				<th>Date</th>
+				<th>Cost</th>
+				<th>Delivery Boy ID</th>
+			</tr>
+      </thead>
+      <tbody>
+			<tr *ngFor="let courier of couriers">
+        <ng-container *ngIf="courier.delivered==false && loggedid===courier.userid">
+			   <td>{{courier.id}}</td>
+			   <td>{{courier.source}}</td>
+			   <td>{{courier.destination}}</td>
+			   <td>{{courier.date}}</td>
+			   <td>{{courier.cost}}</td>
+			   <td>{{courier.deliveryboyid}}</td>
+        </ng-container>
+			</tr>
+      </tbody>
+		</table>
+		<br>
+		<h3 style="margin-left: 10vh;color: chocolate;">History of couriers</h3>
+		<table id="myTable2">
+      <thead>
+			<tr>
+				<th>ID</th>
+				<th>Source</th>
+        <th>Destination</th>
+				<th>Date of delivery</th>
+				<th>Cost</th>
+        <th>Delivery Boy ID</th>
+			</tr>
+      </thead>
+      <tbody>
+			<tr *ngFor="let courier of couriers">
+      <ng-container *ngIf="courier.delivered==true && loggedid===courier.userid">
+			   <td>{{courier.id}}</td>
+			   <td>{{courier.source}}</td>
+			   <td>{{courier.destination}}</td>
+			   <td>{{courier.date}}</td>
+			   <td>{{courier.cost}}</td>
+         <td>{{courier.deliveryboyid}}</td>
+        <td><button id="bill" class="btn" name="bill" value="Bill" (click)="bill(courier)">Bill</button></td>
+				<div id="billarea"></div>
+      </ng-container>
+			</tr>
+      </tbody>
+		</table>
+
+	<!----------x-----------main----------x----------->
